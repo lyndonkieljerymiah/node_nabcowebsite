@@ -1,0 +1,22 @@
+{
+  "name": "nabcowebsite",
+  "description": "nabco website",
+  "main": "index.js",
+  "authors": [
+    "arnold.mercado@hotmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "font-awesome": "font-awsome#^4.7.0"
+  }
+}
