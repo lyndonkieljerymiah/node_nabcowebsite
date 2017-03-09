@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>@model.title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="/styles/css/default.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="nb-header">
+            <div class="btn-mobnav">
+                <i class="fa fa-align-justify fa-2x"></i>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-offset-3 col-xs-6 col-md-5">
+                        <img src="/imgs/nabco.png" class="nb-logo" />
+                    </div>
+                </div>
+            </div>
+            <nav class="nb-navbar">
+                <div class="container">
+                    <ul>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">New Arrivals</a></li>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        @html.block("body")
+        
+        <!-- sticker -->
+        <div id="sticker" class="sticker stk-show">
+            <div class="social-container">
+                <ul>
+                    <li class="social-nav">
+                        <a id="social-fb" class="social-icon-bg bg-blue active" data-container="fb-container" data-title="Facebook">
+                            <span><i class="fa fa-facebook"></i></span>
+                        </a>
+                    </li>
+                    <li class="social-nav">
+                        <a id="social-youtube" class="social-icon-bg bg-red" data-container="youtube-container" data-title="Youtube">
+                            <span><i class="fa fa-youtube-play"></i></span>
+                        </a>
+                    </li>
+                    <li class="social-nav">
+                        <a id="social-comment" class="social-icon-bg bg-gray" data-container="comment-container" data-title="Comment">
+                            <span><i class="fa fa-envelope-o"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper">
+                <header class="heading">
+                    <h5 id="social-title">Facebook</h5>
+                    <div class="dark-cover"></div>
+                </header>
+                <div class="content">
+                    <div id="fb-container">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNABCO-Furniture-Centre-1503548559966817%2F&tabs=timeline&width=340&height=680&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1805387546380028"
+                                width="340" height="680" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    </div>
+                    <div id="youtube-container" style="display:none">
+                        <script src="//www.powr.io/powr.js" external-type="html"></script>
+                        <div class="powr-youtube-gallery" id="5ae2a953_1488899682953"></div>
+                    </div>
+                    <div id="comment-container" style="display:none">
+                        <form class="form">
+                            <div class="form-group">
+                                <label>Email Address:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope-open fa-fw"></i></span>
+                                    <input type="text" name="emailAddress" class="form-control" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Mobile No:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-mobile-phone fa-fw"></i></span>
+                                    <input type="text" name="mobileNo" class="form-control" placeholder="Mobile No">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Subject No:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-align-justify fa-fw"></i></span>
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Message:</label>
+                                <div><textarea type="text" name="message" class="form-control"></textarea> </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-info">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <ul>
+                        <li><a href="#" class="btn btn-transparent"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="btn btn-transparent"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+        <!-- end -->
+        <script src="/vendors/jquery/dist/jquery.min.js"></script>
+        <script src="/scripts/sticker.js"></script>
+    </body>
+
+</html>
