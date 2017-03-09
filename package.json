@@ -4,9 +4,7 @@
   "description": "nabco website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": 
-
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +15,6 @@
     "gulp-less": "^3.3.0",
     "gulp-livereload": "^3.8.1",
     "vash": "^0.12.2"
-  },
+  }
   
 }
