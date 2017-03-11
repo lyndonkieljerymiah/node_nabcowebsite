@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 /*theme color*/
 /*anchor*/
 /*media query*/
@@ -11,23 +11,10 @@ html {
 body {
   height: 100%;
   background: #f5f5f5;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
-.full-body {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
-}
-.full-body .video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+label {
+  font-size: 14px;
 }
 /*sticker*/
 /*border radius*/
@@ -55,14 +42,14 @@ body {
     width: 270px;
   }
 }
-.sticker .wrapper {
+.sticker > .wrapper {
   position: relative;
   background: whitesmoke;
   min-height: 700px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
-.sticker .wrapper .heading {
+.sticker > .wrapper .heading {
   position: relative;
   width: 100%;
   background: #60212b url('b1.jpg') top left no-repeat;
@@ -72,7 +59,7 @@ body {
   overflow: hidden;
   border-bottom: 1px #8f8164 solid;
 }
-.sticker .wrapper .heading #social-title {
+.sticker > .wrapper .heading #social-title {
   position: absolute;
   top: 0;
   left: 0;
@@ -81,7 +68,7 @@ body {
   color: #d9d7ac;
   z-index: 999;
 }
-.sticker .wrapper .heading .dark-cover {
+.sticker > .wrapper .heading .dark-cover {
   top: 0;
   left: 0;
   width: 100%;
@@ -89,43 +76,49 @@ body {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
 }
-.sticker .wrapper .content {
+.sticker > .wrapper > .content {
   padding: 5px;
   height: 680px;
   overflow-y: scroll;
   background: #F5F5F5;
   border-bottom-right-radius: 10px;
 }
-.sticker .wrapper .content::-webkit-scrollbar {
+.sticker > .wrapper > .content::-webkit-scrollbar {
   width: 8px;
   background-color: #F5F5F5;
 }
-.sticker .wrapper .content::-webkit-scrollbar-thumb {
+.sticker > .wrapper > .content::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.2);
 }
-.sticker .wrapper .footer {
+.sticker > .wrapper > .footer {
   height: 50px;
   width: 100%;
   border-bottom-right-radius: 10px;
   background: #60212b;
 }
-.sticker .wrapper .footer ul {
+.sticker > .wrapper > .footer .footer-content {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background: inherit;
+}
+.sticker > .wrapper > .footer .footer-content ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.sticker .wrapper .footer ul li {
+.sticker > .wrapper > .footer .footer-content ul li {
   float: left;
   padding: 5px;
 }
-.sticker .wrapper .footer ul.after:before,
-.sticker .wrapper .footer ul.after:after {
+.sticker > .wrapper > .footer .footer-content ul.after:before,
+.sticker > .wrapper > .footer .footer-content ul.after:after {
   content: " ";
   display: table;
 }
-.sticker .wrapper .footer ul.after:after {
+.sticker > .wrapper > .footer .footer-content ul.after:after {
   clear: both;
 }
 .sticker.stk-hide {
@@ -196,6 +189,10 @@ body {
 .social-container .social-icon-bg.bg-gray {
   background-color: #cecece;
   color: whitesmoke;
+}
+.social-container .social-icon-bg.bg-creme {
+  background-color: #d9d7ac;
+  color: #8f8164;
 }
 .social-container .social-icon-bg i {
   display: inline-block;
@@ -289,3 +286,57 @@ body {
   }
 }
 /*=============*/
+/*slider*/
+.nb-slider {
+  position: relative;
+  height: 650px;
+}
+.nb-slider .nb-slider-container {
+  overflow: hidden;
+  width: 100%;
+  height: 650px;
+}
+.nb-slider .nb-slider-container > ul {
+  margin: 0;
+  padding: 0;
+}
+.nb-slider .nb-slider-container > ul li {
+  padding: 6px;
+  border-bottom: 1px solid #eeeeee;
+  width: 100%;
+  height: 216px;
+}
+.nb-slider .nb-slider-container .nb-slider-video {
+  width: 100%;
+  height: 194px;
+}
+.nb-slider .nb-slider-control {
+  width: 100%;
+  position: absolute;
+}
+/*========================*/
+/*location*/
+.nb-location {
+  position: relative;
+  width: 100%;
+  height: 650px;
+}
+.nb-location .location-wrapper {
+  padding: 6px;
+}
+.nb-location .location-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nb-location .location-wrapper ul li {
+  border-bottom: 1px solid #eeeeee;
+}
+.nb-location .location-wrapper ul li .map-content {
+  border: 1px solid #eeeeee;
+  width: 100%;
+  height: 210px;
+  background: #60212b;
+  margin-bottom: 5px;
+}
+/*========================*/
