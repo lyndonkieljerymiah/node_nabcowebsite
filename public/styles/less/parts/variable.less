@@ -22,20 +22,22 @@
 
 
 /*media query*/
-@xs-min: 480px;
-@sm-min: 768px; 
-@md-min: 992px;
-@lg-min: 1200px;
+@xs-standard: 480px;
+@sm-standard: 768px; 
+@md-standard: 992px;
+@lg-standard: 1200px;
+@xl-standard: 1201px;
 
-@xs-max: (@sm-min - 1);
-@sm-max: (@md-min - 1);
-@md-max: (@lg-min - 1);
+@xs-min: (@xs-standard + 1);
+@sm-min: (@sm-standard + 1);
+@md-min: (@md-standard + 1);
+@lg-min: (@lg-standard + 1);
 
-
-@phone:   ~"only screen and (max-width: @{xs-max})";
-@tablet:  ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
-@desktop: ~"only screen and (min-width: @{md-min})"; 
-@large:          ~"only screen and (min-width: @{lg-min})";
+@xs-media: ~"only screen and (max-width: @{xs-standard})";
+@sm-media: ~"only screen and (min-width: @{xs-min}) and (max-width: @{sm-standard})"; 
+@md-media: ~"only screen and (min-width: @{sm-min}) and (max-width: @{md-standard})"; 
+@lg-media: ~"only screen and (min-width: @{md-min}) and (max-width: @{lg-standard})"; 
+@xl-media: ~"only screen and (min-width: @{xl-standard})";
 /*end*/
 
 /*font variable*/

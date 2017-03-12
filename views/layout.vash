@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="/styles/css/default.css" rel="stylesheet" />
+        <link href="/styles/css/default.min.css" rel="stylesheet" />
     </head>
     <body>
         <header class="nb-header">
@@ -65,13 +65,13 @@
             </div>
             <div class="wrapper">
                 <header class="heading">
-                    <h5 id="social-title">Facebook</h5>
+                    <p id="social-title">Facebook</p>
                     <div class="dark-cover"></div>
                 </header>
                 <div class="content">
                     <div id="fb-container">
                         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNABCO-Furniture-Centre-1503548559966817%2F&tabs=timeline&width=340&height=680&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1805387546380028"
-                                width="340" height="680" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                               height="620"  style="border:none;overflow:hidden;width:100%" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                     </div>
                     <div id="youtube-container" style="display:none">
                          <div class="nb-slider">
@@ -165,10 +165,11 @@
                 <footer class="footer">
                     <div class="footer-content">
                         <ul>
-                            <li><a href="#" class="btn btn-transparent"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="btn btn-transparent"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="#" class="btn btn-transparent"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" class="btn btn-transparent"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-facebook fa-fw"></i></a></li>
+                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-youtube fa-fw"></i></a></li>
+                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-instagram fa-fw"></i></a></li>
+                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-twitter fa-fw"></i></a></li>
+                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-map-marker fa-fw"></i></a></li>
                         </ul>
                     </div>
                 </footer>
@@ -177,12 +178,16 @@
         <!-- end -->
 
         <script src="/vendors/jquery/dist/jquery.min.js"></script>
-        <script src="/scripts/sticker.js"></script>
-        <script src="/scripts/slider.js"></script>
+        <script src="/dist/scripts/toolset.min.js"></script>
         <script>
             $(document).ready(function() {
+
                 var slider = new Slider();
+                var sticker = new Sticker();
+                
                 slider.init();
+                sticker.init({delay:3000,src:""});
+
             });
         </script>
     </body>

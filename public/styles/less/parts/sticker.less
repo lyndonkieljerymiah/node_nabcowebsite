@@ -2,9 +2,7 @@
 @import url("variable.less");
 @import url("mixin.less");
 
-@full-padding: 30px;
-@thin-padding: 10px;
-@bg-color: whitesmoke;
+
 @social-icon-width: 40px;
 
 .shadow() {
@@ -31,35 +29,48 @@
     position: fixed;
     top: 2%;
     left: 0px;
-   
 
-    @media @desktop { width: 370px; }
-    @media @tablet {width: 320px;}
-    @media @phone{width: 270px;}
+    @media @lg-media { 
+        width: 370px; 
+    }
+    @media @xl-media { 
+        width: 370px; 
+    }
+    @media @md-media {
+        width: 370px; 
+    }
+    @media @sm-media {
+        width: 350px; 
+    }
+
+    @media @xs-media {
+        width: 250px;
+    }
     
+
     z-index: 999;
     .border-right-radius(10px);
     .shadow();
     > .wrapper {
         position:relative;
-        background: @bg-color;
-        min-height: 700px;
+        background: @color-white;
         .border-right-radius(10px);
         .heading {
             position: relative;
             width: 100%;
             background: @color-red url('b1.jpg') top left no-repeat;
             background-size: cover;
-            min-height: 50px;
+            min-height: 40px;
             border-top-right-radius: 10px;
             overflow:hidden;
             border-bottom: 1px @color-brown solid;
+
             #social-title {
                 position: absolute;
                 top: 0;
                 left: 0;
                 height: 100%;
-                padding: @padding-small-horizontal + 3;
+                padding: @padding-small-horizontal;
                 color:@color-creme;
                 z-index: 999;
             }
@@ -74,7 +85,8 @@
         }
         > .content {
             padding: 5px;
-            height: 680px;
+            height: 640px;
+            width: 100%;
             overflow-y:scroll;
             background: #F5F5F5;
             border-bottom-right-radius: 10px;
@@ -88,14 +100,13 @@
                 background-color: rgba(0,0,0,0.2);
             }
         }
-
         > .footer {
-            height: 50px;
+            height: 40px;
             width: 100%;
             border-bottom-right-radius: 10px;
             background: @color-red;
             .footer-content {
-                width: 80%;
+                width: 65%;
                 height: 100%;
                 margin: 0 auto;
                 background: inherit;
@@ -114,9 +125,11 @@
     }
    
     &.stk-hide {
-        @media @desktop { left: -370px; }
-        @media @tablet {left: -320px;}
-        @media @phone{left: -270px;}
+        @media @xl-media { left: -370px; }
+        @media @lg-media { left: -370px; }
+        @media @md-media { left: -370px; }
+        @media @sm-media {left: -350px;}
+        @media @xs-media{left: -250px;}
         .transition(left,1.1s,ease-in-out);
     }
 
